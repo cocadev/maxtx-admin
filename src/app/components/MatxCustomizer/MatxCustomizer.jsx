@@ -8,32 +8,14 @@ import {
   Link,
   styled,
   ThemeProvider,
-  Tooltip,
   useTheme,
 } from '@mui/material';
 import useSettings from 'app/hooks/useSettings';
 import { Fragment, useState } from 'react';
 import Scrollbar from 'react-perfect-scrollbar';
 import { themeShadows } from '../MatxTheme/themeColors';
-import { H5, Span } from '../Typography';
+import { H5 } from '../Typography';
 import BadgeSelected from './BadgeSelected';
-
-const Label = styled(Span)(({ theme }) => ({
-  fontWeight: 700,
-  fontSize: '1rem',
-  cursor: 'pointer',
-  borderRadius: '4px',
-  marginBottom: '2.5rem',
-  letterSpacing: '1.5px',
-  padding: '.25rem .5rem',
-  transform: 'rotate(90deg)',
-  color: theme.palette.secondary.main,
-  backgroundColor: theme.palette.primary.dark,
-  '&:hover, &.open': {
-    backgroundColor: theme.palette.secondary.main,
-    color: theme.palette.secondary.contrastText,
-  },
-}));
 
 const MaxCustomaizer = styled('div')(({ theme }) => ({
   top: 0,
@@ -101,11 +83,7 @@ const MatxCustomizer = () => {
 
   return (
     <Fragment>
-      <Tooltip title="Theme Settings" placement="left">
-        <Label className="open" onClick={tooglePanel}>
-          DEMOS
-        </Label>
-      </Tooltip>
+
 
       <ThemeProvider theme={activeTheme}>
         <Drawer
