@@ -1,17 +1,17 @@
 export const navigations = [
   { name: 'Dashboard', path: '/dashboard/default', icon: 'dashboard' },
-  { label: 'PAGES', type: 'label' },
+  // { label: 'PAGES', type: 'label' },
   {
-    name: 'Session/Auth',
+    name: 'Admin',
     icon: 'security',
     children: [
-      { name: 'Sign in', iconText: 'SI', path: '/session/signin' },
-      { name: 'Sign up', iconText: 'SU', path: '/session/signup' },
-      { name: 'Forgot Password', iconText: 'FP', path: '/session/forgot-password' },
-      { name: 'Error', iconText: '404', path: '/session/404' },
+      { name: 'Revenue', iconText: 'SI', path: '/revenue' },
+      { name: 'Reward Tokens', iconText: '404', path: '/rewardTokens' },
+      { name: 'Messages', iconText: '404', path: '/messages' },
+      { name: 'Reports', iconText: '404', path: '/reports' },
     ],
   },
-  { label: 'Components', type: 'label' },
+  // { label: 'Components', type: 'label' },
   {
     name: 'Components',
     icon: 'favorite',
@@ -28,20 +28,29 @@ export const navigations = [
       { name: 'Progress', path: '/material/progress', iconText: 'P' },
       { name: 'Radio', path: '/material/radio', iconText: 'R' },
       { name: 'Switch', path: '/material/switch', iconText: 'S' },
+      { name: 'Echarts', path: '/charts/echarts', iconText: 'E' },
       { name: 'Slider', path: '/material/slider', iconText: 'S' },
       { name: 'Snackbar', path: '/material/snackbar', iconText: 'S' },
       { name: 'Table', path: '/material/table', iconText: 'T' },
     ],
   },
+  // {
+  //   name: 'Charts',
+  //   icon: 'trending_up',
+  //   children: [
+
+  //   ],
+  // },
   {
-    name: 'Charts',
-    icon: 'trending_up',
-    children: [{ name: 'Echarts', path: '/charts/echarts', iconText: 'E' }],
-  },
-  {
-    name: 'Documentation',
+    name: 'Template Documentation',
     icon: 'launch',
     type: 'extLink',
     path: 'http://demos.ui-lib.com/matx-react-doc/',
+  },
+  {
+    name: 'Metasalt',
+    icon: 'launch',
+    type: 'extLink',
+    path: 'https://metasalt.io',
   },
 ];

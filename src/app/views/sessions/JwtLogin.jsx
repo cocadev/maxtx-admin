@@ -5,7 +5,7 @@ import { Paragraph } from 'app/components/Typography';
 import useAuth from 'app/hooks/useAuth';
 import { Formik } from 'formik';
 import { useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 
 const FlexBox = styled(Box)(() => ({ display: 'flex', alignItems: 'center' }));
@@ -126,12 +126,6 @@ const JwtLogin = () => {
                         <Paragraph>Remember Me</Paragraph>
                       </FlexBox>
 
-                      <NavLink
-                        to="/session/forgot-password"
-                        style={{ color: theme.palette.primary.main }}
-                      >
-                        Forgot password?
-                      </NavLink>
                     </FlexBox>
 
                     <LoadingButton
@@ -144,15 +138,6 @@ const JwtLogin = () => {
                       Login
                     </LoadingButton>
 
-                    <Paragraph>
-                      Don't have an account?
-                      <NavLink
-                        to="/session/signup"
-                        style={{ color: theme.palette.primary.main, marginLeft: 5 }}
-                      >
-                        Register
-                      </NavLink>
-                    </Paragraph>
                   </form>
                 )}
               </Formik>

@@ -10,7 +10,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Span } from '../../../components/Typography';
 import NotificationBar from '../../NotificationBar/NotificationBar';
-import ShoppingCart from '../../ShoppingCart';
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
   color: theme.palette.text.primary,
@@ -122,8 +121,6 @@ const Layout1Topbar = () => {
           <NotificationProvider>
             <NotificationBar />
           </NotificationProvider>
-
-          <ShoppingCart />
 
           <MatxMenu
             menuButton={
